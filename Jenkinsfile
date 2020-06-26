@@ -46,7 +46,8 @@ sh 'sudo rm -r *; sudo git clone https://github.com/s1012/Jenkins.git'
 stage('terraform plan'){
 steps{
 
-// sh 'ls /var/lib/jenkins/workspace/s3; sudo /root/terraform plan /var/lib/jenkins/workspace/s3'
+ sh 'ls /var/lib/jenkins/workspace/s3;'
+//sh ' sudo /root/terraform plan /var/lib/jenkins/workspace/s3'
 }
 }
 
