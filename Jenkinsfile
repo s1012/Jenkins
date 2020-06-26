@@ -16,7 +16,7 @@ sh 'sudo rm -r *; sudo git clone https://github.com/s1012/Jenkins.git'
 }
   stage('tfvars Create'){
         steps{
-           sh 'sudo cp /root/vars.tf ./s3/'
+           sh 'sudo cp /root/vars.tf  /var/lib/jenkins/workspace/s3/'
 }
 }  
 
