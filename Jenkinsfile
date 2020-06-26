@@ -42,7 +42,7 @@ sh 'sudo rm -r *; sudo git clone https://github.com/s1012/Jenkins.git'
          // sh 'terraform destroy -auto-approve' 
 }
 }
-  
+]  
 stage('terraform plan'){
 steps{
 
