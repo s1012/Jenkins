@@ -4,8 +4,7 @@ pipeline {
  stages {
  stage(‘checkout’) {
  steps {
- git branch: ‘master’, url: ‘https://github.com/s1012/Jenkins.git’
- 
+ sh 'sudo git clone https://github.com/s1012/Jenkins.git’
  }
  }
  stage(‘Set Terraform path’) {
@@ -15,7 +14,6 @@ pipeline {
  env.PATH = “${tfHome}:${env.PATH}”
  }
  sh ‘terraform — version’
- 
  
  }
  }
