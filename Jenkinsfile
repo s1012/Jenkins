@@ -11,6 +11,7 @@ steps{
   stage('git clone'){
 
      steps{
+
 sh 'sudo rm -r *; sudo git clone https://github.com/s1012/Jenkins.git'
 }
 }
@@ -22,12 +23,9 @@ sh 'sudo rm -r *; sudo git clone https://github.com/s1012/Jenkins.git'
 
    stage('terraform init'){
     steps{
-       {
+
            sh 'terraform init'
            sh 'terraform plan -out=plan'
-         // sh 'terraform apply plan'
-         // sh 'terraform destroy -auto-approve' 
-}
 }
 }  
 stage('terraform plan'){
