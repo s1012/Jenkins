@@ -47,7 +47,7 @@ stage('terraform apply'){
 stage('terraform ended'){
 
  steps{
-      sh ' echo "Ended....!!!!!!!"'
+      sh ' echo "Ended...!.!!!!!!!"'
 }
  }
 
