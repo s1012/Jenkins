@@ -25,7 +25,6 @@ sh 'sudo rm -r *; sudo git clone https://github.com/s1012/Jenkins.git'
     steps{
 
            sh 'terraform init'
-           sh 'terraform plan -out=plan'
 }
 }  
 stage('terraform plan'){
@@ -34,6 +33,17 @@ steps{
 sh 'terraform plan -out=plan'
 }
 }
+
+stage('terraform apply'){
+
+ steps{
+
+  sh 'terraform apply plan'
+}
+}
+
+
+
 stage('terraform ended'){
 
  steps{
