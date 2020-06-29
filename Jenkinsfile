@@ -51,5 +51,12 @@ stage('terraform ended'){
 }
  }
 
+  stage('destroy instances'){
+
+ steps{
+      
+    terraform destroy
+}
+}
 }
 }
