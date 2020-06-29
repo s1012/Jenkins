@@ -35,7 +35,7 @@ steps{
 
 sh 'terraform plan -out=plan'
 }
-
+}
 stage('terraform ended'){
 
  steps{
